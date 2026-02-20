@@ -56,6 +56,6 @@ Aprire un terminale nella stessa schermata della directory in cui è stata clona
     streamlit run gui.py
 ```  
 
-In questo modo verrà eseguita l'interfaccia grafica che permette il caricamento dell'immagine e del modello per risolvere i task. Tutti i modelli pre-addestrati sono salvati all'interno della cartella ```models```. Il file ```CNN model training.ipynb```  che può essere eseguito solo su kaggle. Il dataset andrà importato correttamente all'interno della piattaforma. Tuttavia la GUI sviluppata può essere eseguita tranquillamente in locale.
+In questo modo verrà eseguita l'interfaccia grafica che permette il caricamento dell'immagine e del modello per risolvere i task. Tutti i modelli pre-addestrati sono salvati all'interno della cartella ```models```. Il file ```CNN model training.ipynb```  può essere eseguito solo su kaggle e permette l'addestramento e il test dei modelli impiegati nel task 1 e task 2. Il dataset andrà importato correttamente all'interno della piattaforma. Il task 3 è stato risolto nel file ```task_3.py``` e anche il suo modello ottenuto è salvato in ```models```. La GUI sviluppata può essere eseguita in locale dato che usa i modelli pre-addestrati per tutti i task.
 
 ---
