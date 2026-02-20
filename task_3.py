@@ -316,4 +316,4 @@ if __name__ == "__main__":
         'model_color': model_color,
         'model_fused': model_fused
     }
-    #joblib.dump(pipeline_export, 'models/cv_model_pipeline.pkl')
+    joblib.dump(pipeline_export, 'models/cv_model_pipeline.pkl')
