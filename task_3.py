@@ -287,25 +287,23 @@ if __name__ == "__main__":
 
 
     # test
-    res_clean = process_and_evaluate(PATH_TEST_CLEAN, "CLEAN")
     res_degraded = process_and_evaluate(PATH_TEST_DEGRADED, "DEGRADED")
 
-    print("\n" + "=" * 100)
-    print(f"{'STRATEGIA':<22} | {'CLEAN T-1':<10} | {'CLEAN T-5':<10} | {'DEG T-1':<10} | {'DEG T-5':<10} | {'DELTA T-1'}")
-    print("-" * 100)
+    print("\n" + "=" * 70)
+    print(f"{'STRATEGIA':<22} | {'Top-1 Accuracy':<15} | {'Top-5 Accuracy':<15} |")
+    print("-" * 70)
 
     metrics = [
-        ("SIFT Only", res_clean[0], res_degraded[0]),
-        ("LBP Only (Texture)", res_clean[1], res_degraded[1]),
-        ("Color Only", res_clean[2], res_degraded[2]),
-        ("FUSION (ALL)", res_clean[3], res_degraded[3])
+        ("SIFT Only", res_degraded[0]),
+        ("LBP Only (Texture)", res_degraded[1]),
+        ("Color Only", res_degraded[2]),
+        ("FUSION (ALL)", res_degraded[3])
     ]
 
-    for name, (acc_c_1, acc_c_5), (acc_d_1, acc_d_5) in metrics:
-        delta_1 = acc_c_1 - acc_d_1
-        print(f"{name:<22} | {acc_c_1:.2%}     | {acc_c_5:.2%}     | {acc_d_1:.2%}     | {acc_d_5:.2%}     | {delta_1:+.2%}")
+    for name, (acc_d_1, acc_d_5) in metrics:
+        print(f"{name:<22} | {acc_d_1:.2%}     | {acc_d_5:.2%}     |")
 
-    print("=" * 100)
+    print("=" * 70)
     print(f" Execution time: {time.time() - start_time:.1f} seconds")
 
     pipeline_export = {
@@ -318,4 +316,4 @@ if __name__ == "__main__":
         'model_color': model_color,
         'model_fused': model_fused
     }
-    joblib.dump(pipeline_export, 'models/cv_model_pipeline.pkl')
+    #joblib.dump(pipeline_export, 'models/cv_model_pipeline.pkl')

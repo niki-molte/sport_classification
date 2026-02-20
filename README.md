@@ -29,14 +29,14 @@ cd existing_repo
 git clone https://github.com/niki-molte/sport_classification
 ```
 
-### 2. Setup del virtual environmnet
+### 2. Setup del virtual environment
 
 Aprire la directory del progetto nel terminale ed eseguire:
 
 ```bash
     python3 -m venv venv
     source venv/bin/activate       # Linux/macOS
-    venv\Scripts\activate.bat      # Windows
+    venv\Scripts\activate          # Windows
 ```
 
 ### 3. Installa le dependencies
@@ -56,6 +56,6 @@ Aprire un terminale nella stessa schermata della directory in cui è stata clona
     streamlit run gui.py
 ```  
 
-In questo verrà eseguita l'interfaccia grafica che permette il caricamento dell'immagine e del modello per risolvere i task. Per maggiori informazioni consultare le presentazione.
+In questo modo verrà eseguita l'interfaccia grafica che permette il caricamento dell'immagine e del modello per risolvere i task. Tutti i modelli pre-addestrati sono salvati all'interno della cartella ```models```. Il file ```CNN model training.ipynb```  che può essere eseguito solo su kaggle. Il dataset andrà importato correttamente all'interno della piattaforma. Tuttavia la GUI sviluppata può essere eseguita tranquillamente in locale.
 
 ---
